@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="pizza.css"/>
+    <script src="moduleForIE.js"></script>
+    <script src="pizza.js"></script>
+</head>
+<body>
+
+    <form>
+
+    <fieldset id="size">
+        <legend>Step 1: choose your size</legend>
+
+        <label> <img src="img/1.png" alt="mini">
+        <input type="radio" name="size" value="mini"
+        data-val="40"> </label>
+
+        <label> <img src="img/2.png" alt="small">
+        <input type="radio" name="size" value="small"
+        data-val="50"> </label>
+
+        <label> <img src="img/3.png" alt="medium">
+        <input type="radio" name="size" value="medium"
+        data-val="60"> </label>
+
+        <label> <img src="img/4.png" alt="large">
+        <input type="radio" name="size" value="large"
+        data-val="70"> </label>
+
+        <div class="errorbig" id="sizeMsg"></div>
+
+    </fieldset>
+
+    <fieldset id="ingred">
+        <legend>Step 2: choose the ingredients </legend>
+
+        <label> mashrooms
+            <input type="checkbox" name="ing" value="mashrooms"
+            data-val="15"> </label>
+
+        <label> bacon
+            <input type="checkbox" name="ing" value="bacon"
+            data-val="25"> </label>
+
+        <label> tomatoes
+            <input type="checkbox" name="ing" value="tomatoes"
+            data-val="15"> </label>
+
+        <label> olives
+            <input type="checkbox" name="ing" value="olives"
+            data-val="15"> </label>
+
+        <label> cheese
+            <input type="checkbox" name="ing" value="cheese"
+            data-val="20"> </label>
+        <div class="errorbig" id="ingrMsg"></div>
+
+    </fieldset>
+
+    <fieldset id="delivery">
+        <legend>Step 3: Delivery details </legend>
+
+        <div>
+            <div class="long"> <label for="n"> * Your name: </label> </div>
+            <input type="text" name="name" id="n"
+            data-val="\S"
+            data-val-msg="Please, enter your name."
+            data-val-msg-id="nameMsg">
+            <div class="error" id="nameMsg"></div> </div>
+
+        <div>
+        <div class="long"> <label for="p"> * Your phone number: </label> </div>
+            <input type="text" name="phone" id="p" placeholder="0xx-xxx-xx-xx"
+             data-val="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+             data-val-msg="Please, enter your phone number in format xxx-xxx-xx-xx."
+             data-val-msg-id="phoneMsg">
+            <div class="error" id="phoneMsg"></div>
+        </div>
+
+        <div>
+            <p>  Your address </p>
+        <label for="str"> * Street: </label>
+            <input type="text" name="street" id="str"
+                   data-val="\S"
+                   data-val-msg="Please, enter the address for delivery"
+                   data-val-msg-id="adMsg">
+
+        <label for="b"> * Building: </label>
+            <input type="text" name="build" id="b" class="short"
+                   data-val="\S"
+                   data-val-msg="Please, enter the full address for delivery"
+                   data-val-msg-id="adMsg">
+
+
+            <label for="ap">  Ap.:  </label>
+            <input type="text" name="apart" class="short" id="ap">
+        <label> Floor:
+            <input type="text" name="floor" class="short"> </label>
+            <div class="error" id="adMsg"></div> </div>
+
+
+    </fieldset>
+
+    <fieldset class="total"> <legend id="total"> </legend></fieldset>
+
+    <input class="button" type="submit" value="Order">
+
+    </form>
+
+
+
+</body>
+</html>

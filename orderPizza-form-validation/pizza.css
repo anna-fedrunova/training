@@ -1,0 +1,63 @@
+form {
+    width: 50%;
+    padding-left: 25%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+fieldset {
+    border-style: dotted;
+    border-color: beige;
+    margin-bottom: 15px;
+    padding-left: 3%;
+}
+
+legend {
+    color: brown;
+    font-size: x-large;
+    font-style: oblique;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+#delivery div, p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.long {
+    width: 25%;
+    float: left;
+}
+.errorbig {
+    color: brown;
+    background-color: beige;
+    font-size: 110%;
+    margin-top: 15px;
+    padding-left: 20%;
+}
+.error {
+    left: 25%;
+    font-size: 75%;
+    color: brown;
+}
+.short {
+    width: 30px;
+}
+.shortinvalid {
+    width: 30px;
+    border-color: brown;
+}
+.shortvalid {
+    width: 30px;
+}
+.invalid {
+    border-color: brown;
+}
+.button {
+    width: 20%;
+    height: 30px;
+    margin-left: 40%;
+    background-color: beige;
+    font-size: 110%;
+    font-style: oblique;
+    color: brown;
+}

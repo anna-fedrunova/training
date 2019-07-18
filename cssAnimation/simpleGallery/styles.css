@@ -1,0 +1,50 @@
+div.container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+.set {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 7px;
+    transform-style: preserve-3d;
+}
+.set >.img, .set>.hiddenText{
+   position: absolute;
+    width: 300px;
+    height: 300px;
+    margin: 7px;
+       border-radius: 10px;
+   transition: all .7s ease-in-out;
+}
+#n1{
+    background: url("img/bg.jpg") no-repeat center;
+    background-size: cover;
+}
+#n2{
+    background: url("img/bg2.jpg") no-repeat center;
+    background-size: cover;
+}
+#n3{
+    background: url("img/bg3.jpg") no-repeat center;
+    background-size: cover;
+}
+.hiddenText {
+    background: cornsilk;
+    line-height: 300px;
+    color: firebrick;
+    text-align: center;
+    font-size: x-large;
+    transform: rotate3d(0,1,0,180deg);
+}
+.backface .img, .backface .hiddenText {
+    backface-visibility: hidden;
+}
+.set:hover .img{
+    transform: rotate3d(0,1,0,180deg);
+}
+.set:hover .hiddenText{
+    transform: rotate3d(0,1,0,0deg);
+}
